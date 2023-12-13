@@ -28,18 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtCNombre = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pbxImagen = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.griProductos = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pbxImagen = new System.Windows.Forms.PictureBox();
+            this.txtDetalles = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.chkMarcasAutos = new System.Windows.Forms.CheckedListBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -58,7 +63,6 @@
             this.txtLimpiar = new System.Windows.Forms.Button();
             this.txtModificar = new System.Windows.Forms.Button();
             this.txtAgregar = new System.Windows.Forms.Button();
-            this.txtBuscar = new System.Windows.Forms.Button();
             this.lblId = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.txtRId = new System.Windows.Forms.TextBox();
@@ -93,7 +97,6 @@
             this.btnLimpiarProveedor = new System.Windows.Forms.Button();
             this.btnModificarProveedor = new System.Windows.Forms.Button();
             this.btnAgregarProveedor = new System.Windows.Forms.Button();
-            this.btnBuscarProveedor = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.txtProvId = new System.Windows.Forms.TextBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
@@ -102,10 +105,8 @@
             this.txtProvNombre = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.btnLimpiarProvincia = new System.Windows.Forms.Button();
             this.btnModificarProvincia = new System.Windows.Forms.Button();
             this.btnAgregarProvincia = new System.Windows.Forms.Button();
-            this.btnBuscarProvincia = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.txtCiuId = new System.Windows.Forms.TextBox();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
@@ -119,7 +120,6 @@
             this.btnLimpiarCiudad = new System.Windows.Forms.Button();
             this.btnModificarCiudad = new System.Windows.Forms.Button();
             this.btnAgregarCiudad = new System.Windows.Forms.Button();
-            this.btnBuscarCiudad = new System.Windows.Forms.Button();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.griMarcasAutos = new System.Windows.Forms.DataGridView();
@@ -131,15 +131,13 @@
             this.txtLimpiarAuto = new System.Windows.Forms.Button();
             this.txtModificarAuto = new System.Windows.Forms.Button();
             this.txtAgregarAuto = new System.Windows.Forms.Button();
-            this.txtBuscarAuto = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.txtCNombre.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.griProductos)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -168,22 +166,13 @@
             this.groupBox19.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(710, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(188, 165);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBox1.Controls.Add(this.txtCNombre);
             this.groupBox1.Location = new System.Drawing.Point(12, 7);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1029, 709);
+            this.groupBox1.Size = new System.Drawing.Size(1085, 758);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
@@ -199,7 +188,7 @@
             this.txtCNombre.Location = new System.Drawing.Point(18, 19);
             this.txtCNombre.Name = "txtCNombre";
             this.txtCNombre.SelectedIndex = 0;
-            this.txtCNombre.Size = new System.Drawing.Size(924, 666);
+            this.txtCNombre.Size = new System.Drawing.Size(1038, 723);
             this.txtCNombre.TabIndex = 0;
             // 
             // tabPage1
@@ -207,26 +196,15 @@
             this.tabPage1.BackColor = System.Drawing.Color.Black;
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Controls.Add(this.groupBox3);
-            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.lblId);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(916, 637);
+            this.tabPage1.Size = new System.Drawing.Size(1030, 694);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Repuestos";
-            // 
-            // pbxImagen
-            // 
-            this.pbxImagen.Image = ((System.Drawing.Image)(resources.GetObject("pbxImagen.Image")));
-            this.pbxImagen.Location = new System.Drawing.Point(486, 94);
-            this.pbxImagen.Name = "pbxImagen";
-            this.pbxImagen.Size = new System.Drawing.Size(188, 179);
-            this.pbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxImagen.TabIndex = 2;
-            this.pbxImagen.TabStop = false;
             // 
             // groupBox4
             // 
@@ -234,35 +212,43 @@
             this.groupBox4.ForeColor = System.Drawing.Color.Lime;
             this.groupBox4.Location = new System.Drawing.Point(6, 389);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(674, 217);
+            this.groupBox4.Size = new System.Drawing.Size(995, 299);
             this.groupBox4.TabIndex = 16;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Lista de Repuestos";
             // 
             // griProductos
             // 
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.griProductos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.griProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.griProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Blue;
+            this.griProductos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.griProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.griProductos.DefaultCellStyle = dataGridViewCellStyle3;
             this.griProductos.Location = new System.Drawing.Point(20, 22);
             this.griProductos.Name = "griProductos";
-            this.griProductos.Size = new System.Drawing.Size(629, 179);
+            this.griProductos.RowHeadersVisible = false;
+            this.griProductos.Size = new System.Drawing.Size(958, 247);
             this.griProductos.TabIndex = 0;
             this.griProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.griProductos_CellClick);
-            this.griProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.griProductos_CellContentClick);
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.pbxImagen);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.txtDetalles);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.chkMarcasAutos);
             this.groupBox3.Controls.Add(this.label20);
@@ -278,18 +264,28 @@
             this.groupBox3.ForeColor = System.Drawing.Color.Lime;
             this.groupBox3.Location = new System.Drawing.Point(6, 6);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(698, 296);
+            this.groupBox3.Size = new System.Drawing.Size(995, 296);
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos";
             // 
-            // textBox1
+            // pbxImagen
             // 
-            this.textBox1.Location = new System.Drawing.Point(91, 191);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(359, 85);
-            this.textBox1.TabIndex = 15;
+            this.pbxImagen.Image = ((System.Drawing.Image)(resources.GetObject("pbxImagen.Image")));
+            this.pbxImagen.Location = new System.Drawing.Point(707, 22);
+            this.pbxImagen.Name = "pbxImagen";
+            this.pbxImagen.Size = new System.Drawing.Size(271, 254);
+            this.pbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxImagen.TabIndex = 2;
+            this.pbxImagen.TabStop = false;
+            // 
+            // txtDetalles
+            // 
+            this.txtDetalles.Location = new System.Drawing.Point(91, 188);
+            this.txtDetalles.Multiline = true;
+            this.txtDetalles.Name = "txtDetalles";
+            this.txtDetalles.Size = new System.Drawing.Size(595, 85);
+            this.txtDetalles.TabIndex = 15;
             // 
             // label11
             // 
@@ -304,16 +300,16 @@
             // chkMarcasAutos
             // 
             this.chkMarcasAutos.FormattingEnabled = true;
-            this.chkMarcasAutos.Location = new System.Drawing.Point(299, 94);
+            this.chkMarcasAutos.Location = new System.Drawing.Point(456, 94);
             this.chkMarcasAutos.Name = "chkMarcasAutos";
-            this.chkMarcasAutos.Size = new System.Drawing.Size(131, 76);
+            this.chkMarcasAutos.Size = new System.Drawing.Size(230, 76);
             this.chkMarcasAutos.TabIndex = 13;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.ForeColor = System.Drawing.Color.Lime;
-            this.label20.Location = new System.Drawing.Point(247, 101);
+            this.label20.Location = new System.Drawing.Point(396, 94);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(48, 17);
             this.label20.TabIndex = 12;
@@ -322,9 +318,9 @@
             // chkProveedores
             // 
             this.chkProveedores.FormattingEnabled = true;
-            this.chkProveedores.Location = new System.Drawing.Point(79, 94);
+            this.chkProveedores.Location = new System.Drawing.Point(91, 94);
             this.chkProveedores.Name = "chkProveedores";
-            this.chkProveedores.Size = new System.Drawing.Size(132, 76);
+            this.chkProveedores.Size = new System.Drawing.Size(265, 76);
             this.chkProveedores.TabIndex = 11;
             // 
             // label10
@@ -348,17 +344,17 @@
             // cmbMedidas
             // 
             this.cmbMedidas.FormattingEnabled = true;
-            this.cmbMedidas.Location = new System.Drawing.Point(309, 52);
+            this.cmbMedidas.Location = new System.Drawing.Point(456, 56);
             this.cmbMedidas.Name = "cmbMedidas";
-            this.cmbMedidas.Size = new System.Drawing.Size(121, 24);
+            this.cmbMedidas.Size = new System.Drawing.Size(230, 24);
             this.cmbMedidas.TabIndex = 8;
             // 
             // cmbRubros
             // 
             this.cmbRubros.FormattingEnabled = true;
-            this.cmbRubros.Location = new System.Drawing.Point(73, 56);
+            this.cmbRubros.Location = new System.Drawing.Point(91, 56);
             this.cmbRubros.Name = "cmbRubros";
-            this.cmbRubros.Size = new System.Drawing.Size(138, 24);
+            this.cmbRubros.Size = new System.Drawing.Size(265, 24);
             this.cmbRubros.TabIndex = 7;
             // 
             // label5
@@ -375,7 +371,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Lime;
-            this.label4.Location = new System.Drawing.Point(239, 56);
+            this.label4.Location = new System.Drawing.Point(386, 56);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 17);
             this.label4.TabIndex = 5;
@@ -383,7 +379,7 @@
             // 
             // txtPrdNombre
             // 
-            this.txtPrdNombre.Location = new System.Drawing.Point(71, 23);
+            this.txtPrdNombre.Location = new System.Drawing.Point(91, 21);
             this.txtPrdNombre.Name = "txtPrdNombre";
             this.txtPrdNombre.Size = new System.Drawing.Size(359, 23);
             this.txtPrdNombre.TabIndex = 3;
@@ -405,11 +401,10 @@
             this.groupBox2.Controls.Add(this.txtLimpiar);
             this.groupBox2.Controls.Add(this.txtModificar);
             this.groupBox2.Controls.Add(this.txtAgregar);
-            this.groupBox2.Controls.Add(this.txtBuscar);
             this.groupBox2.ForeColor = System.Drawing.Color.Lime;
             this.groupBox2.Location = new System.Drawing.Point(6, 308);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(698, 75);
+            this.groupBox2.Size = new System.Drawing.Size(995, 75);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Acciones";
@@ -417,9 +412,9 @@
             // txtImagen
             // 
             this.txtImagen.ForeColor = System.Drawing.Color.Maroon;
-            this.txtImagen.Location = new System.Drawing.Point(160, 19);
+            this.txtImagen.Location = new System.Drawing.Point(214, 22);
             this.txtImagen.Name = "txtImagen";
-            this.txtImagen.Size = new System.Drawing.Size(72, 26);
+            this.txtImagen.Size = new System.Drawing.Size(92, 36);
             this.txtImagen.TabIndex = 14;
             this.txtImagen.Text = "Imagen";
             this.txtImagen.UseVisualStyleBackColor = true;
@@ -428,9 +423,9 @@
             // txtEliminar
             // 
             this.txtEliminar.ForeColor = System.Drawing.Color.Maroon;
-            this.txtEliminar.Location = new System.Drawing.Point(306, 19);
+            this.txtEliminar.Location = new System.Drawing.Point(446, 22);
             this.txtEliminar.Name = "txtEliminar";
-            this.txtEliminar.Size = new System.Drawing.Size(72, 26);
+            this.txtEliminar.Size = new System.Drawing.Size(92, 36);
             this.txtEliminar.TabIndex = 13;
             this.txtEliminar.Text = "Eliminar";
             this.txtEliminar.UseVisualStyleBackColor = true;
@@ -439,9 +434,9 @@
             // txtLimpiar
             // 
             this.txtLimpiar.ForeColor = System.Drawing.Color.Maroon;
-            this.txtLimpiar.Location = new System.Drawing.Point(379, 19);
+            this.txtLimpiar.Location = new System.Drawing.Point(557, 22);
             this.txtLimpiar.Name = "txtLimpiar";
-            this.txtLimpiar.Size = new System.Drawing.Size(72, 26);
+            this.txtLimpiar.Size = new System.Drawing.Size(93, 36);
             this.txtLimpiar.TabIndex = 12;
             this.txtLimpiar.Text = "Limpiar";
             this.txtLimpiar.UseVisualStyleBackColor = true;
@@ -450,9 +445,9 @@
             // txtModificar
             // 
             this.txtModificar.ForeColor = System.Drawing.Color.Maroon;
-            this.txtModificar.Location = new System.Drawing.Point(233, 19);
+            this.txtModificar.Location = new System.Drawing.Point(324, 22);
             this.txtModificar.Name = "txtModificar";
-            this.txtModificar.Size = new System.Drawing.Size(72, 26);
+            this.txtModificar.Size = new System.Drawing.Size(94, 36);
             this.txtModificar.TabIndex = 11;
             this.txtModificar.Text = "Modificar";
             this.txtModificar.UseVisualStyleBackColor = true;
@@ -461,23 +456,13 @@
             // txtAgregar
             // 
             this.txtAgregar.ForeColor = System.Drawing.Color.Maroon;
-            this.txtAgregar.Location = new System.Drawing.Point(87, 19);
+            this.txtAgregar.Location = new System.Drawing.Point(91, 22);
             this.txtAgregar.Name = "txtAgregar";
-            this.txtAgregar.Size = new System.Drawing.Size(72, 26);
+            this.txtAgregar.Size = new System.Drawing.Size(100, 36);
             this.txtAgregar.TabIndex = 10;
             this.txtAgregar.Text = "Agregar";
             this.txtAgregar.UseVisualStyleBackColor = true;
             this.txtAgregar.Click += new System.EventHandler(this.txtAgregar_Click);
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.ForeColor = System.Drawing.Color.Maroon;
-            this.txtBuscar.Location = new System.Drawing.Point(14, 19);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(72, 26);
-            this.txtBuscar.TabIndex = 4;
-            this.txtBuscar.Text = "Buscar";
-            this.txtBuscar.UseVisualStyleBackColor = true;
             // 
             // lblId
             // 
@@ -499,7 +484,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(916, 637);
+            this.tabPage2.Size = new System.Drawing.Size(1030, 694);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Rubros";
             // 
@@ -515,9 +500,9 @@
             // 
             this.groupBox5.Controls.Add(this.griRubros);
             this.groupBox5.ForeColor = System.Drawing.Color.Lime;
-            this.groupBox5.Location = new System.Drawing.Point(6, 137);
+            this.groupBox5.Location = new System.Drawing.Point(6, 163);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(471, 183);
+            this.groupBox5.Size = new System.Drawing.Size(629, 508);
             this.groupBox5.TabIndex = 19;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Lista de Rubros";
@@ -525,9 +510,17 @@
             // griRubros
             // 
             this.griRubros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.griRubros.DefaultCellStyle = dataGridViewCellStyle4;
             this.griRubros.Location = new System.Drawing.Point(20, 22);
             this.griRubros.Name = "griRubros";
-            this.griRubros.Size = new System.Drawing.Size(435, 145);
+            this.griRubros.Size = new System.Drawing.Size(596, 461);
             this.griRubros.TabIndex = 0;
             this.griRubros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.griRubros_CellClick);
             // 
@@ -538,16 +531,16 @@
             this.groupBox6.ForeColor = System.Drawing.Color.Lime;
             this.groupBox6.Location = new System.Drawing.Point(6, 6);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(471, 61);
+            this.groupBox6.Size = new System.Drawing.Size(629, 61);
             this.groupBox6.TabIndex = 18;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Datos";
             // 
             // txtRNombre
             // 
-            this.txtRNombre.Location = new System.Drawing.Point(71, 23);
+            this.txtRNombre.Location = new System.Drawing.Point(82, 22);
             this.txtRNombre.Name = "txtRNombre";
-            this.txtRNombre.Size = new System.Drawing.Size(359, 23);
+            this.txtRNombre.Size = new System.Drawing.Size(534, 23);
             this.txtRNombre.TabIndex = 3;
             // 
             // label6
@@ -569,7 +562,7 @@
             this.groupBox7.ForeColor = System.Drawing.Color.Lime;
             this.groupBox7.Location = new System.Drawing.Point(6, 72);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(471, 60);
+            this.groupBox7.Size = new System.Drawing.Size(629, 85);
             this.groupBox7.TabIndex = 17;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Acciones";
@@ -577,19 +570,20 @@
             // btnLimpiarRubro
             // 
             this.btnLimpiarRubro.ForeColor = System.Drawing.Color.Maroon;
-            this.btnLimpiarRubro.Location = new System.Drawing.Point(354, 19);
+            this.btnLimpiarRubro.Location = new System.Drawing.Point(397, 31);
             this.btnLimpiarRubro.Name = "btnLimpiarRubro";
-            this.btnLimpiarRubro.Size = new System.Drawing.Size(67, 21);
+            this.btnLimpiarRubro.Size = new System.Drawing.Size(83, 36);
             this.btnLimpiarRubro.TabIndex = 12;
             this.btnLimpiarRubro.Text = "Limpiar";
             this.btnLimpiarRubro.UseVisualStyleBackColor = true;
+            this.btnLimpiarRubro.Click += new System.EventHandler(this.btnLimpiarRubro_Click);
             // 
             // btnModificarRubro
             // 
             this.btnModificarRubro.ForeColor = System.Drawing.Color.Maroon;
-            this.btnModificarRubro.Location = new System.Drawing.Point(208, 19);
+            this.btnModificarRubro.Location = new System.Drawing.Point(292, 31);
             this.btnModificarRubro.Name = "btnModificarRubro";
-            this.btnModificarRubro.Size = new System.Drawing.Size(67, 21);
+            this.btnModificarRubro.Size = new System.Drawing.Size(90, 36);
             this.btnModificarRubro.TabIndex = 11;
             this.btnModificarRubro.Text = "Modificar";
             this.btnModificarRubro.UseVisualStyleBackColor = true;
@@ -598,9 +592,9 @@
             // btnAgregarRubro
             // 
             this.btnAgregarRubro.ForeColor = System.Drawing.Color.Maroon;
-            this.btnAgregarRubro.Location = new System.Drawing.Point(135, 19);
+            this.btnAgregarRubro.Location = new System.Drawing.Point(181, 31);
             this.btnAgregarRubro.Name = "btnAgregarRubro";
-            this.btnAgregarRubro.Size = new System.Drawing.Size(67, 21);
+            this.btnAgregarRubro.Size = new System.Drawing.Size(94, 36);
             this.btnAgregarRubro.TabIndex = 10;
             this.btnAgregarRubro.Text = "Agregar";
             this.btnAgregarRubro.UseVisualStyleBackColor = true;
@@ -609,9 +603,9 @@
             // btnBuscarRubro
             // 
             this.btnBuscarRubro.ForeColor = System.Drawing.Color.Maroon;
-            this.btnBuscarRubro.Location = new System.Drawing.Point(62, 19);
+            this.btnBuscarRubro.Location = new System.Drawing.Point(82, 31);
             this.btnBuscarRubro.Name = "btnBuscarRubro";
-            this.btnBuscarRubro.Size = new System.Drawing.Size(67, 21);
+            this.btnBuscarRubro.Size = new System.Drawing.Size(84, 36);
             this.btnBuscarRubro.TabIndex = 4;
             this.btnBuscarRubro.Text = "Buscar";
             this.btnBuscarRubro.UseVisualStyleBackColor = true;
@@ -626,13 +620,13 @@
             this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(916, 637);
+            this.tabPage3.Size = new System.Drawing.Size(1030, 694);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Proveedores";
             // 
             // txtPId
             // 
-            this.txtPId.Location = new System.Drawing.Point(864, 21);
+            this.txtPId.Location = new System.Drawing.Point(962, 204);
             this.txtPId.Name = "txtPId";
             this.txtPId.Size = new System.Drawing.Size(49, 23);
             this.txtPId.TabIndex = 16;
@@ -642,9 +636,9 @@
             // 
             this.groupBox8.Controls.Add(this.griProveedores);
             this.groupBox8.ForeColor = System.Drawing.Color.Lime;
-            this.groupBox8.Location = new System.Drawing.Point(6, 235);
+            this.groupBox8.Location = new System.Drawing.Point(6, 217);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(862, 383);
+            this.groupBox8.Size = new System.Drawing.Size(1005, 444);
             this.groupBox8.TabIndex = 19;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Lista de Proveedores";
@@ -652,9 +646,17 @@
             // griProveedores
             // 
             this.griProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.griProveedores.DefaultCellStyle = dataGridViewCellStyle5;
             this.griProveedores.Location = new System.Drawing.Point(20, 22);
             this.griProveedores.Name = "griProveedores";
-            this.griProveedores.Size = new System.Drawing.Size(836, 334);
+            this.griProveedores.Size = new System.Drawing.Size(962, 403);
             this.griProveedores.TabIndex = 0;
             this.griProveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.griProveedores_CellClick);
             // 
@@ -674,7 +676,7 @@
             this.groupBox9.Controls.Add(this.label9);
             this.groupBox9.Location = new System.Drawing.Point(6, 3);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(856, 129);
+            this.groupBox9.Size = new System.Drawing.Size(1005, 106);
             this.groupBox9.TabIndex = 18;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Datos";
@@ -683,7 +685,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.ForeColor = System.Drawing.Color.Lime;
-            this.label22.Location = new System.Drawing.Point(641, 88);
+            this.label22.Location = new System.Drawing.Point(816, 24);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(56, 17);
             this.label22.TabIndex = 15;
@@ -691,23 +693,23 @@
             // 
             // txtPEmail
             // 
-            this.txtPEmail.Location = new System.Drawing.Point(405, 79);
+            this.txtPEmail.Location = new System.Drawing.Point(803, 56);
             this.txtPEmail.Name = "txtPEmail";
             this.txtPEmail.Size = new System.Drawing.Size(196, 23);
             this.txtPEmail.TabIndex = 14;
             // 
             // txtPSitio
             // 
-            this.txtPSitio.Location = new System.Drawing.Point(99, 79);
+            this.txtPSitio.Location = new System.Drawing.Point(402, 56);
             this.txtPSitio.Name = "txtPSitio";
-            this.txtPSitio.Size = new System.Drawing.Size(239, 23);
+            this.txtPSitio.Size = new System.Drawing.Size(343, 23);
             this.txtPSitio.TabIndex = 13;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Lime;
-            this.label1.Location = new System.Drawing.Point(353, 82);
+            this.label1.Location = new System.Drawing.Point(751, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 17);
             this.label1.TabIndex = 12;
@@ -717,7 +719,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Lime;
-            this.label2.Location = new System.Drawing.Point(13, 82);
+            this.label2.Location = new System.Drawing.Point(307, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 17);
             this.label2.TabIndex = 11;
@@ -725,22 +727,22 @@
             // 
             // txtPTelefono
             // 
-            this.txtPTelefono.Location = new System.Drawing.Point(616, 56);
+            this.txtPTelefono.Location = new System.Drawing.Point(82, 56);
             this.txtPTelefono.Name = "txtPTelefono";
             this.txtPTelefono.Size = new System.Drawing.Size(208, 23);
             this.txtPTelefono.TabIndex = 10;
             // 
             // txtPDomicilio
             // 
-            this.txtPDomicilio.Location = new System.Drawing.Point(98, 53);
+            this.txtPDomicilio.Location = new System.Drawing.Point(537, 21);
             this.txtPDomicilio.Name = "txtPDomicilio";
-            this.txtPDomicilio.Size = new System.Drawing.Size(446, 23);
+            this.txtPDomicilio.Size = new System.Drawing.Size(269, 23);
             this.txtPDomicilio.TabIndex = 9;
             // 
             // cmbPCiudad
             // 
             this.cmbPCiudad.FormattingEnabled = true;
-            this.cmbPCiudad.Location = new System.Drawing.Point(703, 88);
+            this.cmbPCiudad.Location = new System.Drawing.Point(878, 18);
             this.cmbPCiudad.Name = "cmbPCiudad";
             this.cmbPCiudad.Size = new System.Drawing.Size(121, 24);
             this.cmbPCiudad.TabIndex = 8;
@@ -749,7 +751,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Lime;
-            this.label7.Location = new System.Drawing.Point(550, 56);
+            this.label7.Location = new System.Drawing.Point(8, 56);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 17);
             this.label7.TabIndex = 6;
@@ -759,7 +761,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.Lime;
-            this.label8.Location = new System.Drawing.Point(13, 56);
+            this.label8.Location = new System.Drawing.Point(463, 24);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 17);
             this.label8.TabIndex = 5;
@@ -767,9 +769,9 @@
             // 
             // txtPNombre
             // 
-            this.txtPNombre.Location = new System.Drawing.Point(98, 22);
+            this.txtPNombre.Location = new System.Drawing.Point(82, 22);
             this.txtPNombre.Name = "txtPNombre";
-            this.txtPNombre.Size = new System.Drawing.Size(726, 23);
+            this.txtPNombre.Size = new System.Drawing.Size(358, 23);
             this.txtPNombre.TabIndex = 3;
             // 
             // label9
@@ -787,11 +789,10 @@
             this.groupBox10.Controls.Add(this.btnLimpiarProveedor);
             this.groupBox10.Controls.Add(this.btnModificarProveedor);
             this.groupBox10.Controls.Add(this.btnAgregarProveedor);
-            this.groupBox10.Controls.Add(this.btnBuscarProveedor);
             this.groupBox10.ForeColor = System.Drawing.Color.Lime;
-            this.groupBox10.Location = new System.Drawing.Point(6, 147);
+            this.groupBox10.Location = new System.Drawing.Point(6, 125);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(856, 60);
+            this.groupBox10.Size = new System.Drawing.Size(1008, 73);
             this.groupBox10.TabIndex = 17;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Acciones";
@@ -799,19 +800,20 @@
             // btnLimpiarProveedor
             // 
             this.btnLimpiarProveedor.ForeColor = System.Drawing.Color.Maroon;
-            this.btnLimpiarProveedor.Location = new System.Drawing.Point(324, 20);
+            this.btnLimpiarProveedor.Location = new System.Drawing.Point(302, 23);
             this.btnLimpiarProveedor.Name = "btnLimpiarProveedor";
-            this.btnLimpiarProveedor.Size = new System.Drawing.Size(75, 26);
+            this.btnLimpiarProveedor.Size = new System.Drawing.Size(103, 36);
             this.btnLimpiarProveedor.TabIndex = 12;
             this.btnLimpiarProveedor.Text = "Limpiar";
             this.btnLimpiarProveedor.UseVisualStyleBackColor = true;
+            this.btnLimpiarProveedor.Click += new System.EventHandler(this.btnLimpiarProveedor_Click);
             // 
             // btnModificarProveedor
             // 
             this.btnModificarProveedor.ForeColor = System.Drawing.Color.Maroon;
-            this.btnModificarProveedor.Location = new System.Drawing.Point(244, 19);
+            this.btnModificarProveedor.Location = new System.Drawing.Point(190, 23);
             this.btnModificarProveedor.Name = "btnModificarProveedor";
-            this.btnModificarProveedor.Size = new System.Drawing.Size(74, 28);
+            this.btnModificarProveedor.Size = new System.Drawing.Size(100, 37);
             this.btnModificarProveedor.TabIndex = 11;
             this.btnModificarProveedor.Text = "Modificar";
             this.btnModificarProveedor.UseVisualStyleBackColor = true;
@@ -820,23 +822,13 @@
             // btnAgregarProveedor
             // 
             this.btnAgregarProveedor.ForeColor = System.Drawing.Color.Maroon;
-            this.btnAgregarProveedor.Location = new System.Drawing.Point(154, 19);
+            this.btnAgregarProveedor.Location = new System.Drawing.Point(82, 22);
             this.btnAgregarProveedor.Name = "btnAgregarProveedor";
-            this.btnAgregarProveedor.Size = new System.Drawing.Size(84, 28);
+            this.btnAgregarProveedor.Size = new System.Drawing.Size(98, 37);
             this.btnAgregarProveedor.TabIndex = 10;
             this.btnAgregarProveedor.Text = "Agregar";
             this.btnAgregarProveedor.UseVisualStyleBackColor = true;
             this.btnAgregarProveedor.Click += new System.EventHandler(this.btnAgregarProveedor_Click);
-            // 
-            // btnBuscarProveedor
-            // 
-            this.btnBuscarProveedor.ForeColor = System.Drawing.Color.Maroon;
-            this.btnBuscarProveedor.Location = new System.Drawing.Point(62, 19);
-            this.btnBuscarProveedor.Name = "btnBuscarProveedor";
-            this.btnBuscarProveedor.Size = new System.Drawing.Size(86, 28);
-            this.btnBuscarProveedor.TabIndex = 4;
-            this.btnBuscarProveedor.Text = "Buscar";
-            this.btnBuscarProveedor.UseVisualStyleBackColor = true;
             // 
             // tabPage4
             // 
@@ -848,7 +840,7 @@
             this.tabPage4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(916, 637);
+            this.tabPage4.Size = new System.Drawing.Size(1030, 694);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Provincias";
             // 
@@ -864,9 +856,9 @@
             // 
             this.groupBox11.Controls.Add(this.griProvincias);
             this.groupBox11.ForeColor = System.Drawing.Color.Lime;
-            this.groupBox11.Location = new System.Drawing.Point(6, 135);
+            this.groupBox11.Location = new System.Drawing.Point(6, 176);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(471, 183);
+            this.groupBox11.Size = new System.Drawing.Size(455, 515);
             this.groupBox11.TabIndex = 19;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Lista de Provincias";
@@ -874,9 +866,17 @@
             // griProvincias
             // 
             this.griProvincias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.griProvincias.Location = new System.Drawing.Point(20, 22);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.griProvincias.DefaultCellStyle = dataGridViewCellStyle6;
+            this.griProvincias.Location = new System.Drawing.Point(17, 22);
             this.griProvincias.Name = "griProvincias";
-            this.griProvincias.Size = new System.Drawing.Size(435, 139);
+            this.griProvincias.Size = new System.Drawing.Size(420, 476);
             this.griProvincias.TabIndex = 0;
             this.griProvincias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.griProvincias_CellClick);
             // 
@@ -886,7 +886,7 @@
             this.groupBox12.Controls.Add(this.label12);
             this.groupBox12.Location = new System.Drawing.Point(6, 3);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(471, 60);
+            this.groupBox12.Size = new System.Drawing.Size(455, 66);
             this.groupBox12.TabIndex = 18;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Datos";
@@ -910,34 +910,22 @@
             // 
             // groupBox13
             // 
-            this.groupBox13.Controls.Add(this.btnLimpiarProvincia);
             this.groupBox13.Controls.Add(this.btnModificarProvincia);
             this.groupBox13.Controls.Add(this.btnAgregarProvincia);
-            this.groupBox13.Controls.Add(this.btnBuscarProvincia);
             this.groupBox13.ForeColor = System.Drawing.Color.Lime;
-            this.groupBox13.Location = new System.Drawing.Point(6, 69);
+            this.groupBox13.Location = new System.Drawing.Point(6, 90);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(471, 60);
+            this.groupBox13.Size = new System.Drawing.Size(455, 66);
             this.groupBox13.TabIndex = 17;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Acciones";
             // 
-            // btnLimpiarProvincia
-            // 
-            this.btnLimpiarProvincia.ForeColor = System.Drawing.Color.Maroon;
-            this.btnLimpiarProvincia.Location = new System.Drawing.Point(354, 19);
-            this.btnLimpiarProvincia.Name = "btnLimpiarProvincia";
-            this.btnLimpiarProvincia.Size = new System.Drawing.Size(67, 21);
-            this.btnLimpiarProvincia.TabIndex = 12;
-            this.btnLimpiarProvincia.Text = "Limpiar";
-            this.btnLimpiarProvincia.UseVisualStyleBackColor = true;
-            // 
             // btnModificarProvincia
             // 
             this.btnModificarProvincia.ForeColor = System.Drawing.Color.Maroon;
-            this.btnModificarProvincia.Location = new System.Drawing.Point(208, 19);
+            this.btnModificarProvincia.Location = new System.Drawing.Point(167, 19);
             this.btnModificarProvincia.Name = "btnModificarProvincia";
-            this.btnModificarProvincia.Size = new System.Drawing.Size(67, 21);
+            this.btnModificarProvincia.Size = new System.Drawing.Size(86, 35);
             this.btnModificarProvincia.TabIndex = 11;
             this.btnModificarProvincia.Text = "Modificar";
             this.btnModificarProvincia.UseVisualStyleBackColor = true;
@@ -946,23 +934,13 @@
             // btnAgregarProvincia
             // 
             this.btnAgregarProvincia.ForeColor = System.Drawing.Color.Maroon;
-            this.btnAgregarProvincia.Location = new System.Drawing.Point(135, 19);
+            this.btnAgregarProvincia.Location = new System.Drawing.Point(71, 19);
             this.btnAgregarProvincia.Name = "btnAgregarProvincia";
-            this.btnAgregarProvincia.Size = new System.Drawing.Size(67, 21);
+            this.btnAgregarProvincia.Size = new System.Drawing.Size(81, 35);
             this.btnAgregarProvincia.TabIndex = 10;
             this.btnAgregarProvincia.Text = "Agregar";
             this.btnAgregarProvincia.UseVisualStyleBackColor = true;
             this.btnAgregarProvincia.Click += new System.EventHandler(this.btnAgregarProvincia_Click);
-            // 
-            // btnBuscarProvincia
-            // 
-            this.btnBuscarProvincia.ForeColor = System.Drawing.Color.Maroon;
-            this.btnBuscarProvincia.Location = new System.Drawing.Point(62, 19);
-            this.btnBuscarProvincia.Name = "btnBuscarProvincia";
-            this.btnBuscarProvincia.Size = new System.Drawing.Size(67, 21);
-            this.btnBuscarProvincia.TabIndex = 4;
-            this.btnBuscarProvincia.Text = "Buscar";
-            this.btnBuscarProvincia.UseVisualStyleBackColor = true;
             // 
             // tabPage5
             // 
@@ -974,7 +952,7 @@
             this.tabPage5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(916, 637);
+            this.tabPage5.Size = new System.Drawing.Size(1030, 694);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Ciudades";
             // 
@@ -992,7 +970,7 @@
             this.groupBox14.ForeColor = System.Drawing.Color.Lime;
             this.groupBox14.Location = new System.Drawing.Point(6, 177);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(471, 141);
+            this.groupBox14.Size = new System.Drawing.Size(706, 492);
             this.groupBox14.TabIndex = 19;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Lista de Ciudades";
@@ -1000,9 +978,17 @@
             // griCiudades
             // 
             this.griCiudades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.griCiudades.Location = new System.Drawing.Point(20, 22);
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.griCiudades.DefaultCellStyle = dataGridViewCellStyle7;
+            this.griCiudades.Location = new System.Drawing.Point(17, 22);
             this.griCiudades.Name = "griCiudades";
-            this.griCiudades.Size = new System.Drawing.Size(435, 116);
+            this.griCiudades.Size = new System.Drawing.Size(672, 442);
             this.griCiudades.TabIndex = 0;
             this.griCiudades.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.griCiudades_CellClick);
             // 
@@ -1014,7 +1000,7 @@
             this.groupBox15.Controls.Add(this.label15);
             this.groupBox15.Location = new System.Drawing.Point(6, 3);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(471, 102);
+            this.groupBox15.Size = new System.Drawing.Size(706, 102);
             this.groupBox15.TabIndex = 18;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Datos";
@@ -1022,9 +1008,9 @@
             // cmbCProvincia
             // 
             this.cmbCProvincia.FormattingEnabled = true;
-            this.cmbCProvincia.Location = new System.Drawing.Point(73, 56);
+            this.cmbCProvincia.Location = new System.Drawing.Point(81, 55);
             this.cmbCProvincia.Name = "cmbCProvincia";
-            this.cmbCProvincia.Size = new System.Drawing.Size(138, 24);
+            this.cmbCProvincia.Size = new System.Drawing.Size(211, 24);
             this.cmbCProvincia.TabIndex = 7;
             // 
             // label13
@@ -1039,9 +1025,9 @@
             // 
             // txtCiuNombre
             // 
-            this.txtCiuNombre.Location = new System.Drawing.Point(71, 23);
+            this.txtCiuNombre.Location = new System.Drawing.Point(81, 24);
             this.txtCiuNombre.Name = "txtCiuNombre";
-            this.txtCiuNombre.Size = new System.Drawing.Size(359, 23);
+            this.txtCiuNombre.Size = new System.Drawing.Size(381, 23);
             this.txtCiuNombre.TabIndex = 3;
             // 
             // label15
@@ -1059,11 +1045,10 @@
             this.groupBox16.Controls.Add(this.btnLimpiarCiudad);
             this.groupBox16.Controls.Add(this.btnModificarCiudad);
             this.groupBox16.Controls.Add(this.btnAgregarCiudad);
-            this.groupBox16.Controls.Add(this.btnBuscarCiudad);
             this.groupBox16.ForeColor = System.Drawing.Color.Lime;
             this.groupBox16.Location = new System.Drawing.Point(6, 111);
             this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(471, 60);
+            this.groupBox16.Size = new System.Drawing.Size(706, 60);
             this.groupBox16.TabIndex = 17;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Acciones";
@@ -1071,19 +1056,20 @@
             // btnLimpiarCiudad
             // 
             this.btnLimpiarCiudad.ForeColor = System.Drawing.Color.Maroon;
-            this.btnLimpiarCiudad.Location = new System.Drawing.Point(354, 19);
+            this.btnLimpiarCiudad.Location = new System.Drawing.Point(273, 19);
             this.btnLimpiarCiudad.Name = "btnLimpiarCiudad";
-            this.btnLimpiarCiudad.Size = new System.Drawing.Size(67, 21);
+            this.btnLimpiarCiudad.Size = new System.Drawing.Size(80, 35);
             this.btnLimpiarCiudad.TabIndex = 12;
             this.btnLimpiarCiudad.Text = "Limpiar";
             this.btnLimpiarCiudad.UseVisualStyleBackColor = true;
+            this.btnLimpiarCiudad.Click += new System.EventHandler(this.btnLimpiarCiudad_Click);
             // 
             // btnModificarCiudad
             // 
             this.btnModificarCiudad.ForeColor = System.Drawing.Color.Maroon;
-            this.btnModificarCiudad.Location = new System.Drawing.Point(208, 19);
+            this.btnModificarCiudad.Location = new System.Drawing.Point(178, 19);
             this.btnModificarCiudad.Name = "btnModificarCiudad";
-            this.btnModificarCiudad.Size = new System.Drawing.Size(67, 21);
+            this.btnModificarCiudad.Size = new System.Drawing.Size(79, 35);
             this.btnModificarCiudad.TabIndex = 11;
             this.btnModificarCiudad.Text = "Modificar";
             this.btnModificarCiudad.UseVisualStyleBackColor = true;
@@ -1092,34 +1078,25 @@
             // btnAgregarCiudad
             // 
             this.btnAgregarCiudad.ForeColor = System.Drawing.Color.Maroon;
-            this.btnAgregarCiudad.Location = new System.Drawing.Point(135, 19);
+            this.btnAgregarCiudad.Location = new System.Drawing.Point(81, 19);
             this.btnAgregarCiudad.Name = "btnAgregarCiudad";
-            this.btnAgregarCiudad.Size = new System.Drawing.Size(67, 21);
+            this.btnAgregarCiudad.Size = new System.Drawing.Size(82, 35);
             this.btnAgregarCiudad.TabIndex = 10;
             this.btnAgregarCiudad.Text = "Agregar";
             this.btnAgregarCiudad.UseVisualStyleBackColor = true;
             this.btnAgregarCiudad.Click += new System.EventHandler(this.btnAgregarCiudad_Click);
             // 
-            // btnBuscarCiudad
-            // 
-            this.btnBuscarCiudad.ForeColor = System.Drawing.Color.Maroon;
-            this.btnBuscarCiudad.Location = new System.Drawing.Point(62, 19);
-            this.btnBuscarCiudad.Name = "btnBuscarCiudad";
-            this.btnBuscarCiudad.Size = new System.Drawing.Size(67, 21);
-            this.btnBuscarCiudad.TabIndex = 4;
-            this.btnBuscarCiudad.Text = "Buscar";
-            this.btnBuscarCiudad.UseVisualStyleBackColor = true;
-            // 
             // tabPage6
             // 
             this.tabPage6.BackColor = System.Drawing.Color.Black;
+            this.tabPage6.Controls.Add(this.txtMarcasAutosId);
             this.tabPage6.Controls.Add(this.groupBox17);
             this.tabPage6.Controls.Add(this.groupBox18);
             this.tabPage6.Controls.Add(this.groupBox19);
             this.tabPage6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage6.Location = new System.Drawing.Point(4, 25);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(916, 637);
+            this.tabPage6.Size = new System.Drawing.Size(1030, 694);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Autos";
             // 
@@ -1127,9 +1104,9 @@
             // 
             this.groupBox17.Controls.Add(this.griMarcasAutos);
             this.groupBox17.ForeColor = System.Drawing.Color.Lime;
-            this.groupBox17.Location = new System.Drawing.Point(6, 261);
+            this.groupBox17.Location = new System.Drawing.Point(6, 173);
             this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(885, 353);
+            this.groupBox17.Size = new System.Drawing.Size(601, 495);
             this.groupBox17.TabIndex = 19;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Lista de Marcas de Autos";
@@ -1137,28 +1114,35 @@
             // griMarcasAutos
             // 
             this.griMarcasAutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.griMarcasAutos.DefaultCellStyle = dataGridViewCellStyle8;
             this.griMarcasAutos.Location = new System.Drawing.Point(20, 22);
             this.griMarcasAutos.Name = "griMarcasAutos";
-            this.griMarcasAutos.Size = new System.Drawing.Size(844, 306);
+            this.griMarcasAutos.Size = new System.Drawing.Size(559, 450);
             this.griMarcasAutos.TabIndex = 0;
             this.griMarcasAutos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.griMarcasAutos_CellClick);
             this.griMarcasAutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.griMarcasAutos_CellContentClick);
             // 
             // groupBox18
             // 
-            this.groupBox18.Controls.Add(this.txtMarcasAutosId);
             this.groupBox18.Controls.Add(this.txtANombre);
             this.groupBox18.Controls.Add(this.label18);
             this.groupBox18.Location = new System.Drawing.Point(6, 3);
             this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Size = new System.Drawing.Size(471, 102);
+            this.groupBox18.Size = new System.Drawing.Size(601, 65);
             this.groupBox18.TabIndex = 18;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Datos";
             // 
             // txtMarcasAutosId
             // 
-            this.txtMarcasAutosId.Location = new System.Drawing.Point(391, 59);
+            this.txtMarcasAutosId.Location = new System.Drawing.Point(985, 27);
             this.txtMarcasAutosId.Name = "txtMarcasAutosId";
             this.txtMarcasAutosId.Size = new System.Drawing.Size(30, 23);
             this.txtMarcasAutosId.TabIndex = 4;
@@ -1168,7 +1152,7 @@
             // 
             this.txtANombre.Location = new System.Drawing.Point(82, 21);
             this.txtANombre.Name = "txtANombre";
-            this.txtANombre.Size = new System.Drawing.Size(359, 23);
+            this.txtANombre.Size = new System.Drawing.Size(497, 23);
             this.txtANombre.TabIndex = 3;
             // 
             // label18
@@ -1186,11 +1170,10 @@
             this.groupBox19.Controls.Add(this.txtLimpiarAuto);
             this.groupBox19.Controls.Add(this.txtModificarAuto);
             this.groupBox19.Controls.Add(this.txtAgregarAuto);
-            this.groupBox19.Controls.Add(this.txtBuscarAuto);
             this.groupBox19.ForeColor = System.Drawing.Color.Lime;
-            this.groupBox19.Location = new System.Drawing.Point(6, 111);
+            this.groupBox19.Location = new System.Drawing.Point(6, 85);
             this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Size = new System.Drawing.Size(471, 60);
+            this.groupBox19.Size = new System.Drawing.Size(601, 73);
             this.groupBox19.TabIndex = 17;
             this.groupBox19.TabStop = false;
             this.groupBox19.Text = "Acciones";
@@ -1198,19 +1181,20 @@
             // txtLimpiarAuto
             // 
             this.txtLimpiarAuto.ForeColor = System.Drawing.Color.Maroon;
-            this.txtLimpiarAuto.Location = new System.Drawing.Point(306, 19);
+            this.txtLimpiarAuto.Location = new System.Drawing.Point(289, 19);
             this.txtLimpiarAuto.Name = "txtLimpiarAuto";
-            this.txtLimpiarAuto.Size = new System.Drawing.Size(67, 21);
+            this.txtLimpiarAuto.Size = new System.Drawing.Size(81, 38);
             this.txtLimpiarAuto.TabIndex = 12;
             this.txtLimpiarAuto.Text = "Limpiar";
             this.txtLimpiarAuto.UseVisualStyleBackColor = true;
+            this.txtLimpiarAuto.Click += new System.EventHandler(this.txtLimpiarAuto_Click);
             // 
             // txtModificarAuto
             // 
             this.txtModificarAuto.ForeColor = System.Drawing.Color.Maroon;
-            this.txtModificarAuto.Location = new System.Drawing.Point(208, 19);
+            this.txtModificarAuto.Location = new System.Drawing.Point(185, 19);
             this.txtModificarAuto.Name = "txtModificarAuto";
-            this.txtModificarAuto.Size = new System.Drawing.Size(67, 21);
+            this.txtModificarAuto.Size = new System.Drawing.Size(88, 38);
             this.txtModificarAuto.TabIndex = 11;
             this.txtModificarAuto.Text = "Modificar";
             this.txtModificarAuto.UseVisualStyleBackColor = true;
@@ -1219,23 +1203,13 @@
             // txtAgregarAuto
             // 
             this.txtAgregarAuto.ForeColor = System.Drawing.Color.Maroon;
-            this.txtAgregarAuto.Location = new System.Drawing.Point(135, 19);
+            this.txtAgregarAuto.Location = new System.Drawing.Point(82, 19);
             this.txtAgregarAuto.Name = "txtAgregarAuto";
-            this.txtAgregarAuto.Size = new System.Drawing.Size(67, 21);
+            this.txtAgregarAuto.Size = new System.Drawing.Size(88, 38);
             this.txtAgregarAuto.TabIndex = 10;
             this.txtAgregarAuto.Text = "Agregar";
             this.txtAgregarAuto.UseVisualStyleBackColor = true;
             this.txtAgregarAuto.Click += new System.EventHandler(this.txtAgregarAuto_Click);
-            // 
-            // txtBuscarAuto
-            // 
-            this.txtBuscarAuto.ForeColor = System.Drawing.Color.Maroon;
-            this.txtBuscarAuto.Location = new System.Drawing.Point(62, 19);
-            this.txtBuscarAuto.Name = "txtBuscarAuto";
-            this.txtBuscarAuto.Size = new System.Drawing.Size(67, 21);
-            this.txtBuscarAuto.TabIndex = 4;
-            this.txtBuscarAuto.Text = "Buscar";
-            this.txtBuscarAuto.UseVisualStyleBackColor = true;
             // 
             // frmPrincipal
             // 
@@ -1248,16 +1222,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bournissent Repuestos";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.txtCNombre.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.griProductos)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -1288,6 +1261,7 @@
             this.groupBox15.PerformLayout();
             this.groupBox16.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             this.groupBox17.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.griMarcasAutos)).EndInit();
             this.groupBox18.ResumeLayout(false);
@@ -1298,7 +1272,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pbxImagen;
         private System.Windows.Forms.TabControl txtCNombre;
@@ -1323,7 +1296,6 @@
         private System.Windows.Forms.Button txtLimpiar;
         private System.Windows.Forms.Button txtModificar;
         private System.Windows.Forms.Button txtAgregar;
-        private System.Windows.Forms.Button txtBuscar;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox5;
@@ -1356,7 +1328,6 @@
         private System.Windows.Forms.Button btnLimpiarProveedor;
         private System.Windows.Forms.Button btnModificarProveedor;
         private System.Windows.Forms.Button btnAgregarProveedor;
-        private System.Windows.Forms.Button btnBuscarProveedor;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.DataGridView griProvincias;
@@ -1364,10 +1335,8 @@
         private System.Windows.Forms.TextBox txtProvNombre;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.Button btnLimpiarProvincia;
         private System.Windows.Forms.Button btnModificarProvincia;
         private System.Windows.Forms.Button btnAgregarProvincia;
-        private System.Windows.Forms.Button btnBuscarProvincia;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.DataGridView griCiudades;
@@ -1380,7 +1349,6 @@
         private System.Windows.Forms.Button btnLimpiarCiudad;
         private System.Windows.Forms.Button btnModificarCiudad;
         private System.Windows.Forms.Button btnAgregarCiudad;
-        private System.Windows.Forms.Button btnBuscarCiudad;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.GroupBox groupBox17;
         private System.Windows.Forms.DataGridView griMarcasAutos;
@@ -1391,8 +1359,7 @@
         private System.Windows.Forms.Button txtLimpiarAuto;
         private System.Windows.Forms.Button txtModificarAuto;
         private System.Windows.Forms.Button txtAgregarAuto;
-        private System.Windows.Forms.Button txtBuscarAuto;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDetalles;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtPId;
         private System.Windows.Forms.TextBox txtMarcasAutosId;
